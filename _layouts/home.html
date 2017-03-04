@@ -11,15 +11,7 @@ layout: default
 </div>
 
 <main class="main">
-  <div style="text-align:center">
-    <img src="assets/images/covered-bridge.png" width=150 />
-  </div>
   {% include navigation.html %}
-  <section class="section" id="map">
-    <h3 class="section-title">Venue</h3>
-    <div class="map-wrapper">
-      <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB94VJ3A-6-FfEagzbI9-CIoBKqKfXWM9c&q=Riverside+Farm,Pittsfield,+VT"></iframe>
-    </div>
-  </section>
+  {% include venue.html %}
   {% include weekend-schedule.html %}
 </main>
