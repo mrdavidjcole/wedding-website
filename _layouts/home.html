@@ -8,15 +8,18 @@ layout: default
     <h2 class="hero-subtitle">October 14, 2017</h2>
     <h2 class="hero-subtitle">Riverside Farm, Pittsfield, VT</h2>
   </div>
+  <div>more text here</div>
 </div>
 
 <main class="main">
-  <div style="text-align:center">covered bridge goes here</div>
+  <div style="text-align:center">
+    <img src="assets/images/covered-bridge.png" width=150 />
+  </div>
   <nav style="text-align:center">
     <ul class="navigation-links-wrapper">
       <li class="navigation-link"><a href="#">Our Story</a></li>
       <li class="navigation-link"><a href="#">Venue & Directions</a></li>
-      <li class="navigation-link"><a href="#">Weekend Schedule</a></li>
+      <li class="navigation-link"><a href="#weekend-schedule">Weekend Schedule</a></li>
       <li class="navigation-link"><a href="#">Things To Do</a></li>
       <li class="navigation-link"><a href="#">Registry & Funds</a></li>
     </ul>
@@ -24,9 +27,10 @@ layout: default
   <section class="section" id="map">
     <h3 class="section-title">Venue</h3>
     <div class="map-wrapper">
-      <iframe width="60%" height="500" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB94VJ3A-6-FfEagzbI9-CIoBKqKfXWM9c&q=Riverside+Farm,Pittsfield,+VT"></iframe>
+      <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB94VJ3A-6-FfEagzbI9-CIoBKqKfXWM9c&q=Riverside+Farm,Pittsfield,+VT"></iframe>
     </div>
   </section>
+  {% include weekend-schedule.html %}
 </main>
 
 <!-- <div class="home">
@@ -50,3 +54,8 @@ layout: default
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 
 </div> -->
+
+<script>
+$('.main').css('margin-top', $('.hero-image').height())
+
+</script>
