@@ -1,12 +1,22 @@
 <nav style="text-align:center">
   <ul class="navigation-links-wrapper">
-    <li class="navigation-link"><a href="#venue">Venue & Directions</a></li>
-    <li class="navigation-link"><a href="#where-to-stay">Where To Stay</a></li>
-    <li class="navigation-link"><a href="#weekend-schedule">Weekend Schedule</a></li>
-    <li class="navigation-link"><a href="#">Things To Do</a></li>
-    <li class="navigation-link"><a href="#">Registry & Funds</a></li>
+    <li class="navigation-link"><a href="#" data-section="venue">Venue & Directions</a></li>
+    <li class="navigation-link"><a href="#" data-section="where-to-stay">Where To Stay</a></li>
+    <li class="navigation-link"><a href="#" data-section="weekend-schedule">Weekend Schedule</a></li>
+    <li class="navigation-link"><a href="#" data-section="things-to-do">Things To Do</a></li>
+    <li class="navigation-link"><a href="#" data-section="#">Registry & Funds</a></li>
   </ul>
 </nav>
 <div class="centered-content-wrapper">
-  <img class="riverside-photo" src="assets/images/riverside-white-barn.jpg" />
+  <img class="full-width-photo" src="assets/images/riverside-white-barn.jpg" />
 </div>
+
+
+<script>
+$('.navigation-link').find('a').click(function(event) {
+  event.preventDefault();
+  console.log($(this).data('section'))
+  $(window).scrollTo("#" + $(this).data('section'), 600)
+})
+
+</script>
