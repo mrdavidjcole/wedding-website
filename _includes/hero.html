@@ -1,5 +1,8 @@
 <header class="hero">
-  <div class="hero-image"></div>
+  <div class="hero-image hero-image-one"></div>
+  <div class="hero-image hero-image-two"></div>
+  <div class="hero-image hero-image-three"></div>
+  <div class="hero-image hero-image-four"></div>
   <div class="hero-text">
     <h1 class="hero-title">Dave & Nora are getting married!</h1>
     <h2 class="hero-subtitle">October 14, 2017</h2>
@@ -11,4 +14,18 @@
   $('.hero').height(window.screen.height * 1.2)
   $('.hero-image').height(window.screen.height * 1.2)
 
+</script>
+
+
+<script>
+  var heroImages = document.getElementsByClassName('hero-image');
+  var counter = 0
+  setInterval(function() {
+    heroImages[counter].style.opacity = 0;
+    counter++
+    if (counter == 4) {
+      counter = 0
+    }
+    heroImages[counter].style.opacity = 1;
+  }, 4000)
 </script>
